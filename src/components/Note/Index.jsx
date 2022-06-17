@@ -1,11 +1,11 @@
 import React from 'react';
 import * as S from './styled';
 
-const Note = () => {
+const Note = (props) => {
     return (
         <S.Wrapper>
-            <h1>Title</h1>
-            <p>Content</p>
+            <h1>{props.title}</h1>
+            <p>{props.content}</p>
         </S.Wrapper>
     )
 }

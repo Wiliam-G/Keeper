@@ -1,13 +1,20 @@
-import './App.css';
 import Footer from './components/Footer/Index';
 import Header from './components/Header/Index';
 import Note from './components/Note/Index';
+import notes from './notes';
+
 
 function App() {
   return (
-    <div className="App">
+    <div>
       <Header />
-      <Note />
+      {notes.map((noteItem) => 
+         <Note 
+          key={noteItem.key} 
+          title={noteItem.title} 
+          content={noteItem.content}
+          />
+      )}
       <Footer />
     </div>
   );
